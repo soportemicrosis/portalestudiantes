@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IGER Delegación Salesiana | Bienvenida 2026</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="navwrap">
+      <div class="brand">
+       <div class="logo" aria-label="Logo IGER">
+    <img src="img/quetzal.svg" alt="Logo IGER" width="78" height="78">
+  </div>
+        <div>
+          <h1>IGER Delegación Salesiana</h1>
+          <p>Guatemala • Ciclo Escolar 2026</p>
+        </div>
+      </div>
+
+      <nav aria-label="Menú principal">
+        <ul class="navmenu">
+          <li><a href="index.html">Inicio</a></li>
+      <li><a href="Pages/Notas.html">Mis Notas</a></li>
+      <li><a href="Pages/grabaciones.html">Grabaciones</a></li>
+      <li><a href="Pages/Nosotros.html">Nosotros</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <article class="card">
+        <div class="card-head">
+          <h2>¡Bienvenidos al Ciclo Escolar 2026!</h2>
+          <p>Profesor: Roberto Herrera • Portal para tareas, guías y entregas.</p>
+        </div>
+        <div class="card-body">
+          <p>
+            Este portal es el punto de encuentro para <b>subir tareas</b>, adjuntar evidencias y mantener
+            organizado el trabajo de clase. Aquí la idea es simple: menos “profe, se me perdió la hoja” y más
+            “profe, ya lo subí” 😄
+          </p>
+
+          <div class="chips" aria-label="Etiquetas">
+            <span class="chip">Tareas</span>
+            <span class="chip">Guías</span>
+            <span class="chip">Archivos</span>
+            <span class="chip">Organización</span>
+          </div>
+
+          <p style="margin-top:14px; font-weight:650; opacity:.9;">
+            Cursos disponibles para entrega de actividades:
+          </p>
+
+          <div class="courses">
+            <div class="grid">
+              <div class="course">
+                <div class="icon">📘</div>
+                <div>
+                  <h4>MATEMÁTICA • 4º BACHILLERATO</h4>
+                  <p>Ejercicios, guías y tareas por unidad.</p>
+                </div>
+              </div>
+
+              <div class="course">
+                <div class="icon">🧲</div>
+                <div>
+                  <h4>FÍSICA • 4º BACHILLERATO</h4>
+                  <p>Problemas, laboratorios y reportes.</p>
+                </div>
+              </div>
+
+              <div class="course">
+                <div class="icon">💻</div>
+                <div>
+                  <h4>TICS / PENSAMIENTO COMPUTACIONAL • 4º BACHILLERATO</h4>
+                  <p>Prácticas, proyectos y ejercicios.</p>
+                </div>
+              </div>
+
+              <div class="course">
+                <div class="icon">🌿</div>
+                <div>
+                  <h4>CIENCIAS NATURALES • 3o BASICO</h4>
+                  <p>Guías, tareas y actividades.</p>
+                </div>
+              </div>
+
+              <div class="course">
+                <div class="icon">🧪</div>
+                <div>
+                  <h4>CIENCIAS NATURALES • 2o BASICO</h4>
+                  <p>Trabajo en clase y refuerzos.</p>
+                </div>
+              </div>
+
+              <div class="course">
+                <div class="icon">✅</div>
+                <div>
+                  <h4>ENTREGAS</h4>
+                  <p>Usa el formulario de abajo para adjuntar tu tarea.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <aside class="card aside">
+        <div class="card-body">
+          <div class="badge">
+            <span class="dot"></span>
+            <div>
+              <b>Recordatorio rápido</b><br />
+              <small>Nombre + grado + curso + archivo. (Sí, en ese orden, por el bien de la humanidad).</small>
+            </div>
+          </div>
+
+          <p style="margin: 0 0 10px; font-weight:700;">
+            ¿Qué vas a encontrar aquí?
+          </p>
+          <ul style="margin:0; padding-left:18px; font-weight:650;">
+            <li>Entregas centralizadas por curso.</li>
+            <li>Menos “se me perdió”, más “ya quedó”.</li>
+            <li>Todo con formato y orden (milagro educativo).</li>
+          </ul>
+
+          <div class="kpi" aria-label="Indicadores">
+            <div class="mini">
+              <b>2026</b>
+              <span>Ciclo</span>
+            </div>
+            <div class="mini">
+              <b>5</b>
+              <span>Cursos</span>
+            </div>
+            <div class="mini">
+              <b>1</b>
+              <span>Portal</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- FORM -->
+<section class="form-section" aria-label="Formulario de entrega">
+  <div class="form-wrap">
+    <div class="form-head">
+      <div>
+        <h3>Entrega de Tareas</h3>
+        <small>Completa tus datos y adjunta tu archivo.</small>
+      </div>
+      <small style="font-weight:800;">IGER • Delegación Salesiana</small>
+    </div>
+
+    <!-- ✅ CAMBIOS CLAVE: action, method, enctype -->
+    <form action="insert.php" method="POST" enctype="multipart/form-data">
+      <div class="field">
+        <label for="nombres">Nombres</label>
+        <input id="nombres" name="nombres" type="text" placeholder="Ej: Juan Carlos" required />
+      </div>
+
+      <div class="field">
+        <label for="apellidos">Apellidos</label>
+        <input id="apellidos" name="apellidos" type="text" placeholder="Ej: Pérez López" required />
+      </div>
+
+      <div class="field">
+        <label for="grado">Grado</label>
+        <select id="grado" name="grado" required>
+          <option value="" selected>Selecciona tu grado</option>
+          <option>2o BASICO</option>
+          <option>3o BASICO</option>
+          <option>4o BACHILLERATO</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="curso">Curso</label>
+        <select id="curso" name="curso" required>
+          <option value="" selected>Selecciona el curso</option>
+          <option>MATEMATICA</option>
+          <option>FISICA</option>
+          <option>TICS</option>
+          <option>CIENCIAS NATURALES</option>
+        </select>
+      </div>
+
+      <!-- ✅ NUEVO: Semana -->
+      <div class="field full">
+        <label for="semana">Semana</label>
+        <input
+          id="semana"
+          name="semana"
+          type="number"
+          min="1"
+          max="52"
+          placeholder="Ej: 6"
+          required
+        />
+      </div>
+
+      <div class="field full upload">
+        <label for="archivo">Adjunto</label>
+        <input id="archivo" name="archivo" type="file" required />
+        <div class="hint" style="margin-top:8px;">
+          Tip: nombra tu archivo así: <b>Apellido_Grado_Curso_Tarea01</b>
+        </div>
+      </div>
+
+      <div class="actions">
+        <span class="hint">*Esto registrará tu entrega en el sistema.</span>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn btn-secondary" type="reset">Limpiar</button>
+
+          <!-- ✅ CAMBIO: submit real -->
+          <button class="btn btn-primary" type="submit">Enviar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+    <footer>
+      © 2026 • IGER Delegación Salesiana • Guatemala • Profesor Roberto Herrera
+    </footer>
+  </main>
+</body>
+</html>
